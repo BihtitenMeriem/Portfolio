@@ -1,0 +1,28 @@
+<div class="container-fluid pt-5 pb-3" id="portfolio">
+    <div class="container">
+        <div class="position-relative d-flex align-items-center justify-content-center">
+            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Gallery</h1>
+            <h1 class="position-absolute text-uppercase text-primary">My Projects</h1>
+        </div>
+        <div class="row portfolio-container">
+            
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item second" *ngFor="let item of data">
+                <div class="position-relative overflow-hidden mb-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">{{item.name}}</h4>
+                            <p class="card-text">{{item.description}}</p>
+                            <p class="card-text">Language: {{item.language}}</p> 
+                            <p class="card-text">created at: {{item.created_at}} </p>
+                            <h6 class="card-link">url: {{item.html_url}}</h6>
+                            <div class="items">
+                                <span class="count">{{item.stargazers_count}} <i class="fas fa-star"></i></span>
+                                <span class="count">{{item.forks_count}} <i class="fas fa-download"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
