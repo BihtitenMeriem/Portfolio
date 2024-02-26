@@ -13,24 +13,6 @@ import { HttpClientModule ,HttpClient, HttpErrorResponse, HttpHeaders } from '@a
 export class ProjectComponent {
   data: any=[];
   constructor(private http: HttpClient) { }
-  // getDataFromGitHub() {
-  //   const url = 'https://api.github.com/users/Marybih/repos';
-  //   const token = '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';
-  
-  //   const headers = new HttpHeaders({
-  //     'Authorization': `token ${token}`
-  //   });
-  
-  //   this.http.get(url, { headers }).subscribe(
-  //     (response) => {
-  //       console.log('GitHub API Response:', response);
-  //       this.data = response;
-  //     },
-  //     (error: HttpErrorResponse) => {
-  //       console.log("undefind data");
-  //     }
-  //   );
-  // }
 
   getDataFromGitHub() {
     const url = 'https://api.github.com/users/BihtitenMeriem/repos';

@@ -40,15 +40,15 @@ export class AppComponent {
   }
  
   ngOnInit() {
-    // Add code for scroll 
     this.renderer.listen(window, 'scroll', () => {
       this.renderer.listen('window', 'scroll', () => {
         if (window.pageYOffset > 200) {
-          // Navbar fadeIn
+
+
           this.renderer.setStyle(this.elementRef.nativeElement.querySelector('.navbar'), 'display', 'flex');
           this.renderer.addClass(this.elementRef.nativeElement.querySelector('.navbar'), 'fadeIn');
         } else {
-          // Navbar fadeOut
+
           this.renderer.setStyle(this.elementRef.nativeElement.querySelector('.navbar'), 'display', 'none');
           this.renderer.removeClass(this.elementRef.nativeElement.querySelector('.navbar'), 'fadeIn');
         }
@@ -74,7 +74,7 @@ export class AppComponent {
               behavior: 'smooth'
             });
   
-            // Handle active link
+
             navbarLinks.forEach((link: { classList: { remove: (arg0: string) => any; }; }) => link.classList.remove('active'));
             event.target.classList.add('active');
           }
