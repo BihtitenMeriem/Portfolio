@@ -33,12 +33,11 @@ export class ProjectComponent {
   // }
 
   getDataFromGitHub() {
-    const url = 'https://api.github.com/users/BihtitenMeriem/repos'; // Replace {username} with your GitHub username
+    const url = 'https://api.github.com/users/BihtitenMeriem/repos';
     this.http.get(url).subscribe(
       (response) => {
         console.log('GitHub API Response:', response);
         this.data = response;
-        // Process the response data as needed
       },
       (error) => {
         console.error('Error fetching data from GitHub:', error);
